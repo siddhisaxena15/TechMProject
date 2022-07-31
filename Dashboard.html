@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+    .header{
+      background-color: black;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .middle_header{
+      display: flex;
+    }
+    .first h2{
+      margin-top: 12px;
+    }
+    .middle_header h5{
+      margin-top: 20px;
+    }
+    .versions h2{
+      margin-top: 0px;
+      margin-left: 91px;
+    }
+    .versions h4{
+      margin-left: 57px;
+      color: rgb(55, 124, 204);
+    }
+    .versions h5{
+      margin-left: 46px;
+    }
+    .middle_header_border{
+      border-bottom: 2.8px solid rgb(204, 21, 21);
+    }
+    .underline{
+      border-bottom: 3px solid black;
+      margin-top: 22px;
+    }
+    .underline2{
+      border-bottom: 1px solid black;
+    }
+    .subheader{
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+    }
+    .formfields{
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        margin-top: 10px;
+    }
+    .dbnames{
+  font-family: Arial, Helvetica, sans-serif;
+  color: grey;
+  display: flex;
+  margin-top: 20px;
+}
+.textbox{
+  background-color: rgb(238, 235, 235);
+  width: 250px;
+  height: 120px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-left: 33px;
+  color: black;
+}
+select {
+  width: 100%;
+  padding: 8px 20px;
+  border: 1px solid black;
+}
+.button {
+  text-align: center;
+  font-size: 15px;
+  margin-top: 25px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 30px;
+  float: right;
+}
+.button1 {
+  background-color: black;
+  color: white;
+  border: 2px solid black;
+  padding: 7px 35px;
+} 
+.button2 {
+  background-color: white;
+  color: black;
+  padding: 7px 41px;
+  border: 2px solid black;
+}
+a:hover {
+  text-decoration: none;
+}
+    </style>
+    </head>
+    <body>
+      
+        <div class="row header">
+          <div class="col-sm-6 first middle_header">
+            <img src="https://is4-ssl.mzstatic.com/image/thumb/Purple112/v4/9c/25/b5/9c25b5a5-cc09-7b7d-198c-4f03801f483b/AppIcon-1x_U007emarketing-0-7-0-0-85-220.png/1024x1024bb.png" alt="logo" style="width:40px;height:40px;margin-left:60px;margin-top:7px;">
+            <h2>DB Automation</h2>
+          </div>
+          <div class="col-sm-4 middle_header">
+            <div class="col-sm-2">
+              <a href="" style="color:white;"><h5>Upgrade</h5></a>
+            </div>
+            <div class="col-sm-2 middle_header_border">
+              <a href="" style="color:white;"><h5>Patch</h5></a>
+            </div>
+            <div class="col-sm-2">
+              <a href=""><i class="fa fa-search" style="font-size: 15px; margin-top: 19px; margin-left: 25px; color:white;"></i></a>
+            </div>
+          </div>
+          <div class="col-sm-1 middle_header">
+            <a href="" style="color:white;"><h5>Sign Out</h5></a>
+            <a href=""><i class="fa fa-bell" style="font-size: 15px; margin-top: 20px; margin-left: 9px; color:white;"></i></a>
+          </div>
+        </div>
+
+        <div class="container">
+            <div class="row subheader underline">
+              <div class="col-sm-11">
+                <h4>Select filters</h4>
+              </div>
+              <div class="col-sm-1">
+                <a href=""><i class="fa fa-search" style="font-size: 18px; color:black;"></i></a>
+                <a href=""><i class="fa fa-filter" style="font-size: 22px; margin-left: 27px; color:black;"></i></a>
+              </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="row formfields">
+                <div class="col-sm-6">
+                    <form action="/action_page.php">
+                        <label for="appid">Application ID</label>
+                        <br>
+                        <select id="appid" name="appid">
+                        <option value="app1">App 1</option>
+                        <option value="app2">App 2</option>
+                        <option value="app3">App 3</option>
+                        <option value="app4">App 4</option>
+                        </select>
+                    </form>
+                </div>
+                <div class="col-sm-12">
+                    <form action="/action_page.php">
+                        <label for="dcenter">Data Center</label>
+                        <br>
+                        <select id="dcenter" name="dcenter">
+                        <option value="dallas">Dallas</option>
+                        <option value="london">London</option>
+                        <option value="shanghai">Shanghai</option>
+                        </select>
+                    </form>
+                </div>
+                <div class="col-sm-6">
+                    <form action="/action_page.php">
+                        <label for="env">Environment</label>
+                        <br>
+                        <select id="env" name="env">
+                        <option value="prod">Prod</option>
+                        </select>
+                    </form>
+                </div>
+                <div class="col-sm-6">
+                    <form action="/action_page.php">
+                        <label for="db">Database</label>
+                        <br>
+                        <select id="db" name="db">
+                        <option value="db1">Database 1</option>
+                        <option value="db2">Database 2</option>
+                        <option value="db3">Database 3</option>
+                        <option value="db4">Database 4</option>
+                        <option value="db5">Database 5</option>
+                        <option value="db6">Database 6</option>
+                        <option value="db7">Database 7</option>
+                        <option value="db8">Database 8</option>
+                        <option value="db9">Database 9</option>
+                        <option value="db10">Database 10</option>
+                        <option value="db11">Database 11</option>
+                        <option value="db12">Database 12</option>
+                        <option value="db13">Database 13</option>
+                        <option value="db14">Database 14</option>
+                        <option value="db15">Database 15</option>
+                        <option value="db16">Database 16</option>
+                        <option value="db17">Database 17</option>
+                        <option value="db18">Database 18</option>
+                        <option value="db19">Database 19</option>
+                        <option value="db20">Database 20</option>
+                        <option value="db21">Database 21</option>
+                        <option value="db22">Database 22</option>
+                        <option value="db23">Database 23</option>
+                        <option value="db24">Database 24</option>
+                        <option value="db25">Database 25</option>
+                        </select>
+                    </form>
+                </div>
+                <div class="col-sm-6">
+                    <form action="/action_page.php">
+                        <label for="host">Host</label>
+                        <br>
+                        <select id="host" name="host">
+                        <option value="host">Host 1</option>
+                        <option value="host">Host 2</option>
+                        <option value="host">Host 3</option>
+                        <option value="host">Host 4</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+            <button class="button button2">Clear</button>
+            <a href="file:///C:/Users/Hp/Desktop/Project%201/Server%20Details.html"><button class="button button1">Display</button></a>            
+          </div>
+
+        <div class="container">
+          <div class="row subheader underline2">
+            <div class="col-sm-12">
+              <h2>Appl 1 - Summary</h2>
+            </div>
+            <div class="col-sm-5">
+              
+            </div>
+          </div>
+        </div>
+      
+        <div class="container">
+          <div class="row subheader underline2">
+            <div class="col-sm-1 dbnames middle_header_border">
+              <a href="" style="color:grey;"><h4>&nbsp;Oracle</h4></a>
+            </div>
+            <div class="col-sm-1 dbnames">
+              <a href="" style="color:grey;"><h4>Casandra</h4></a>
+            </div>
+            <div class="col-sm-1 dbnames">
+              <a href="" style="color:grey;"><h4>&nbsp;&nbsp;MySQL</h4></a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="container">
+           <div class="row subheader versions">
+            <a href="">
+              <div class="col-sm-3 textbox">
+                <h2>4</h2>
+                <h4>Ver. 19.3.0.0</h4>
+                <h5>Patch Ver. Jan 2022</h5>
+              </div>
+            </a>
+              <a href="">
+                <div class="col-sm-3 textbox">
+                <h2>5</h2>
+                <h4>Ver. 12.1.0.2</h4>
+                <h5>Patch Ver. Jan 2022</h5>
+              </div>
+            </a>
+            </div>
+          </div>

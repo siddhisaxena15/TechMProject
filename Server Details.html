@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Server Details</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+    .header{
+      background-color: black;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .middle_header{
+      display: flex;
+    }
+    .first h2{
+      margin-top: 12px;
+    }
+    .middle_header h5{
+      margin-top: 20px;
+    }
+    .versions h2{
+      margin-top: 0px;
+      margin-left: 91px;
+    }
+    .versions h4{
+      margin-left: 57px;
+      color: rgb(55, 124, 204);
+    }
+    .versions h5{
+      margin-left: 46px;
+    }
+    .middle_header_border{
+      border-bottom: 2.8px solid rgb(204, 21, 21);
+    }
+    .underline{
+      border-bottom: 3px solid black;
+    }
+    .underline2{
+      border-bottom: 1px solid black;
+    }
+    .subheader{
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+    }
+    .formfields{
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        margin-top: 10px;
+    }
+    .dbnames{
+  font-family: Arial, Helvetica, sans-serif;
+  color: grey;
+  display: flex;
+  margin-top: 5px;
+}
+.db_details{
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  margin-top: 5px;
+}
+.textbox{
+  background-color: rgb(238, 235, 235);
+  width: 250px;
+  height: 120px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-left: 33px;
+  color: black;
+}
+.row_header h5{
+  float: right;
+}
+a:hover {
+  text-decoration: none;
+}
+table, th, td {
+  border-collapse: collapse;
+  text-align: left;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+.border {
+  border-bottom: 1px solid #ddd;
+}
+.hover_button:hover {background-color: #D6EEEE;}
+.green_text{ color: rgb(52, 150, 52);}
+.red_text{color: rgb(211, 50, 50);}
+
+    </style>
+   
+    </head>
+    <body>
+      
+        <div class="row header">
+          <div class="col-sm-6 first middle_header">
+            <img src="https://is4-ssl.mzstatic.com/image/thumb/Purple112/v4/9c/25/b5/9c25b5a5-cc09-7b7d-198c-4f03801f483b/AppIcon-1x_U007emarketing-0-7-0-0-85-220.png/1024x1024bb.png" alt="logo" style="width:40px;height:40px;margin-left:60px;margin-top:7px;">
+            <h2>DB Automation</h2>
+          </div>
+          <div class="col-sm-4 middle_header">
+            <div class="col-sm-2">
+              <a href="" style="color:white;"><h5>Upgrade</h5></a>
+            </div>
+            <div class="col-sm-2 middle_header_border">
+              <a href="" style="color:white;"><h5>Patch</h5></a>
+            </div>
+            <div class="col-sm-2">
+              <a href=""><i class="fa fa-search" style="font-size: 15px; margin-top: 19px; margin-left: 25px; color:white;"></i></a>
+            </div>
+          </div>
+          <div class="col-sm-1 middle_header">
+            <a href="" style="color:white;"><h5>Sign Out</h5></a>
+            <a href=""><i class="fa fa-bell" style="font-size: 15px; margin-top: 20px; margin-left: 8px; color:white;"></i></a>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row subheader underline">
+              <div class="col-sm-11">
+                <h2>Summary</h2>
+              </div>
+              <div class="col-sm-1">
+                <a href=""><i class="fa fa-search" style="font-size: 18px; margin-top: 22px; color:black;"></i></a>
+                <a href=""><i class="fa fa-filter" style="font-size: 22px; margin-top: 20px; margin-left: 27px; color:black;"></i></a>
+              </div>
+          </div>
+          <div class="row subheader underline2">
+              <div class="col-sm-1 dbnames middle_header_border">
+                <a href="" style="color:grey;"><h4>&nbsp;Oracle</h4></a>
+              </div>
+              <div class="col-sm-1 dbnames">
+                <a href="" style="color:grey;"><h4>Casandra</h4></a>
+              </div>
+              <div class="col-sm-1 dbnames">
+                <a href="" style="color:grey;"><h4>&nbsp;&nbsp;MySQL</h4></a>
+              </div>
+          </div>
+          <div class="row subheader versions">
+            <a href="">
+              <div class="col-sm-3 textbox">
+                <h2>4</h2>
+                <h4>Ver. 19.3.0.0</h4>
+                <h5>Patch Ver. Jan 2022</h5>
+              </div>
+            </a>
+              <a href="">
+                <div class="col-sm-3 textbox">
+                <h2>2</h2>
+                <h4>Ver. 12.1.0.2</h4>
+                <h5>Patch Ver. Jan 2022</h5>
+              </div>
+            </a>
+          </div>
+          <div class="row subheader underline">
+              <div class="col-sm-11">
+                <h2>Oracle database details</h2>
+              </div>
+          </div>
+          <table style="width:100%">
+            <tr class="underline2">
+              <th>DB Names</th>
+              <th style="width:20%">Servers</th>
+              <th>Grid Ver.</th>
+              <th>RDBMS Ver.</th>
+              <th>Grid Patch Level</th>
+              <th>RDBMS Patch Level</th>
+              <th>Status</th>
+            </tr>
+            <tr>
+              <th rowspan="4" style="color: rgb(55, 124, 204);padding-bottom: 100px;">DB 12C</th>
+              <th colspan="6">Primary Servers</th>
+            </tr>
+            <tr class="border hover_button">
+              
+              <td><a href="file:///C:/Users/Hp/Desktop/Project%201/Application%20Scenario%20Patching.html" style="color: black;">abc001.ebiz.verizon.com</a></td>
+              <td>12.1.0.2</td>
+              <td>12.1.0.2</td>
+              <td>Jan. 2022</td>
+              <td>Jan. 2022</td>
+              <td class="green_text">Active</td>
+            </tr>
+          
+            <tr class="border hover_button">
+            
+              <td><a href="file:///C:/Users/Hp/Desktop/Project%201/Application%20Scenario%20Patching.html" style="color: black;">abc002.ebiz.verizon.com</a></td>
+              <td>12.1.0.2</td>
+              <td>12.1.0.2</td>
+              <td>Jan. 2022</td>
+              <td>Jan. 2022</td>
+              <td class="green_text">Active</td>
+            </tr>
+            <tr class="border hover_button">
+            
+              <td><a href="file:///C:/Users/Hp/Desktop/Project%201/Application%20Scenario%20Patching.html" style="color: black;">abc003.ebiz.verizon.com</a></td>
+              <td>12.1.0.2</td>
+              <td>12.1.0.2</td>
+              <td>Jan. 2022</td>
+              <td>Jan. 2022</td>
+              <td class="green_text">Active</td>
+            </tr>
+            <tr>
+              <th rowspan="4" style="color: rgb(55, 124, 204); padding-bottom: 100px;">DB 12C</th>
+              <th colspan="6">Secondary Servers</th>
+            </tr>
+            <tr class="border hover_button">
+              
+              <td><a href="file:///C:/Users/Hp/Desktop/Project%201/Application%20Scenario%20Upgrading.html" style="color: black;">abc011.ebiz.verizon.com</a></td>
+              <td>12.1.0.2</td>
+              <td>12.1.0.2</td>
+              <td>Jan. 2022</td>
+              <td>Jan. 2022</td>
+              <td class="green_text">Active</td>
+            </tr>
+            <tr class="border hover_button">
+            
+              <td><a href="file:///C:/Users/Hp/Desktop/Project%201/Application%20Scenario%20Upgrading.html" style="color: black;">abc012.ebiz.verizon.com</a></td>
+              <td>12.1.0.2</td>
+              <td>12.1.0.2</td>
+              <td>Jan. 2022</td>
+              <td>Jan. 2022</td>
+              <td class="green_text">Active</td>
+            </tr>
+            <tr class="border hover_button">
+            
+              <td><a href="file:///C:/Users/Hp/Desktop/Project%201/Application%20Scenario%20Upgrading.html" style="color: black;">abc013.ebiz.verizon.com</a></td>
+              <td>12.1.0.2</td>
+              <td>12.1.0.2</td>
+              <td>Jan. 2022</td>
+              <td>Jan. 2022</td>
+              <td class="red_text">Inactive</td>
+            </tr>
+          </table>
+        </div>
+          
